@@ -19,7 +19,7 @@
     "dev": "npx nodemon",
     "prod": "npx tsc && node ./dist/server.js",
     "build": "npx tsc",
-    "build-docker": "npx tsc && docker build -t pmplerp/items-service ."
+    "build-docker": "npx tsc && docker build -t express-ts-boilerplate ."
   },
   "devDependencies": {
     "@types/express": "^4.17.9",
