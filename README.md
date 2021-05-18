@@ -5,6 +5,11 @@ Boilerplate Code for ExpressJS using TypeScript.
 - TS Config for Express
 - Winston Logger
 - Express-Winston Request Logger
+- Healthz endpoint at /healthz
+- Check for VaultSidecar envfile
+- Mongoose
+- Sequelize
+- Dockerfile
 
 ## Setup
 1. Install Dependencies using `yarn`

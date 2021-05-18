@@ -1,20 +1,33 @@
 {
   "name": "express-ts-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Boilerplate Code for ExpressJS using TypeScript",
   "main": "./dist/server.js",
   "author": "Tanuj Ravi Rao",
   "license": "MIT",
   "dependencies": {
-    "@types/express": "^4.17.9",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-winston": "^4.0.5",
-    "nodemon": "^2.0.6",
+    "mongoose": "^5.12.9",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
     "winston": "^3.3.3"
   },
   "scripts": {
-    "test": "ts-node ./src/server.ts",
-    "dev": "nodemon",
-    "prod": "tsc && node ./dist/server.js"
+    "test": "npx ts-node ./src/server.ts",
+    "dev": "npx nodemon",
+    "prod": "npx tsc && node ./dist/server.js",
+    "build": "npx tsc",
+    "build-docker": "npx tsc && docker build -t pmplerp/items-service ."
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/node": "^15.3.0",
+    "@types/uuid": "^8.3.0",
+    "@types/validator": "^13.1.0",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   }
 }

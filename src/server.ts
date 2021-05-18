@@ -20,7 +20,12 @@ class App {
     //support application/x-www-form-urlencoded post data
     this.app.use(express.urlencoded({ extended: false }));
     // import logger
-    this.app.use(expressWinston.logger({winstonInstance: this.logger}))
+    this.app.use(expressWinston.logger({
+      winstonInstance: this.logger,
+      ignoreRoute: function (req, res) {
+        return req.url === '/healthz';
+      }
+    }))
   }
 }
 
