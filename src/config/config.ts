@@ -1,5 +1,7 @@
 import * as dotenv from "dotenv";
 import * as fs from "fs";
+import * as keycloakConfig from "./keycloak.json";
+import {KeycloakConfig} from "keycloak-connect";
 
 interface ServerConfig {
   port: number;
@@ -13,6 +15,9 @@ interface ServerConfig {
   nosql_pass: string;
   nosql_host: string;
   nosql_port: number;
+  //  Keycloak
+  sessionSecret: string;
+  keycloakConfig: KeycloakConfig
 }
 
 // use different env file when running with vault sidecar
@@ -40,7 +45,10 @@ const config: ServerConfig = {
   nosql_pass: process.env.NOSQL_PASS || "devpassword",
   nosql_name: process.env.NOSQL_NAME || "pmplerp_items",
   nosql_host: process.env.NOSQL_HOST || "mysql",
-  nosql_port: normalizePort(process.env.NOSQL_PORT || 27017)
+  nosql_port: normalizePort(process.env.NOSQL_PORT || 27017),
+  // keycloak
+  sessionSecret: process.env.SESSION_SECRET || "some secret",
+  keycloakConfig: keycloakConfig
 };
 
 function normalizePort(val: string | number) {

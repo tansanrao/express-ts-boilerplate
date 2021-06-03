@@ -3,6 +3,8 @@ import config from "./config/config";
 import { IndexRoutes } from "./routes/index.routes";
 import LoggerUtil from "./utils/logger.util"
 import * as expressWinston from "express-winston";
+import {KeycloakService} from "./services/keycloak.service"
+import session = require("express-session");
 
 class App {
   public app: express.Application;
@@ -26,6 +28,19 @@ class App {
         return req.url === '/healthz';
       }
     }))
+    // Keycloak
+    this.app.use(session({
+      secret: 'some secret',
+      proxy: true,
+      cookie: {
+        secure: 'auto',
+        httpOnly: false
+      },
+      resave: false,
+      saveUninitialized: true,
+      store: KeycloakService.MemoryStore
+    }))
+    this.app.use(KeycloakService.Keycloak.middleware())
   }
 }
 

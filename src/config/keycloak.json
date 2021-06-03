@@ -1,0 +1,7 @@
+{
+  "clientId": "myclient",
+  "bearerOnly": true,
+  "serverUrl": "http://localhost:8080/auth",
+  "realm": "myrealm",
+  "realmPublicKey": "MIIBIjANB..."
+}
