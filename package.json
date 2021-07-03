@@ -10,7 +10,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "express-winston": "^4.0.5",
-    "keycloak-connect": "^13.0.1",
+    "keycloak-connect": "^14.0.0",
     "mongoose": "^5.12.12",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",
