@@ -1277,10 +1277,10 @@ kareem@2.3.2:
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.3.2.tgz#78c4508894985b8d38a0dc15e1a8e11078f2ca93"
   integrity sha512-STHz9P7X2L4Kwn72fA4rGyqyXdmrMSdxqHx9IXon/FXluXieaFA6KJ2upcHAHxQPQ0LeM/OjLrhFxifHewOALQ==
 
-keycloak-connect@^13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/keycloak-connect/-/keycloak-connect-13.0.1.tgz#ee0baa43d4458fb4e8dba87ca0c6735ff5756b35"
-  integrity sha512-59yLFJ8ICBiJ2tK6ZmIfDtCdtM4TRiP0pkR3qackTSrIW2fR7nvQ+ad/SLPsHZ9VMNHXgM7lAQ0ieFtGQceOxQ==
+keycloak-connect@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/keycloak-connect/-/keycloak-connect-14.0.0.tgz#a24b0cf2afbb3ed180ab4f30e7659481df924a10"
+  integrity sha512-A/xJRgVGOu7RjFH9ZVDdAezteEAj0tQ7We+jXtpj28I4Vx8ceqXsffR/1+e+h6DQ5LN5izx52TLZdnkm/YZmkg==
   dependencies:
     jwk-to-pem "^2.0.0"
   optionalDependencies:
