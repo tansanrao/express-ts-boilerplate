@@ -12,7 +12,7 @@
     "express-winston": "^4.0.5",
     "keycloak-connect": "^13.0.1",
     "mongoose": "^5.12.12",
-    "mysql2": "^2.2.5",
+    "mysql2": "^2.3.0",
     "sequelize": "^6.6.2",
     "winston": "^3.3.3"
   },
